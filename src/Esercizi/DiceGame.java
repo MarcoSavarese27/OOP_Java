@@ -18,7 +18,6 @@ package Esercizi;
  *
  * @author Justin Musgrove
  */
-
 public class DiceGame {
     public static void main (String[] args){
         int user, computer, userscore = 0, computerscore = 0, winnerscore;
