@@ -1,7 +1,11 @@
 package Esercizi;
 
 import java.util.Arrays;
-
+/**
+ * Implement a Bubble Sort algorithm for sorting arrays of integer numbers
+ *
+ * @author Nicola Bicocchi
+ */
 public class BubbleSort {
     public static void main(String[] args) {
         int dim = (int) (Math.random() * 10);
