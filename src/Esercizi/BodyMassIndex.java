@@ -1,6 +1,5 @@
 package Esercizi;
-
-import Classi.Utili.Persona;
+import Classi.Persona;
 /**
  * Write a program that calculates and displays a person's body mass index
  * (BMI). A person's BMI is calculated with the following formula: BMI = weight
@@ -14,10 +13,8 @@ import Classi.Utili.Persona;
  */
 public class BodyMassIndex {
     public static void main(String[] args){
-        Persona giorgio = new Persona(50, 1.80);
-        System.out.println("Giorgio è " + giorgio.BMI());
-        Persona carloseltopoquegira= new Persona();
-        System.out.println("Carlos el topo que gira è " + carloseltopoquegira.BMI());
+        Persona carloseltopoquegira = new Persona("Carlos", "El topo que gira",15, 50, 1.80);
+        System.out.println(carloseltopoquegira.getNome()+ " " + carloseltopoquegira.getCognome() + " è " + carloseltopoquegira.BMI());
     }
 
 }
