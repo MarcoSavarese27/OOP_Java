@@ -90,6 +90,9 @@ public class CC {
                     System.out.println("Non ci sono azioni recenti!");
                 }
                 break;
+            default:
+                System.out.println("COMANDO NON VALIDO!");
+                break;
         }
         bancomat();
     }
