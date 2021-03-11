@@ -35,9 +35,9 @@ public class Atleta extends Persona{
     //Methods
     public void PrintAtleti(String specialità, Atleta[] atleti){
         int dim = atleti.length;
-        for (int i = 0; i < dim; ++i){
-            if (specialità == atleti[i].getSpecialità()){
-                System.out.println("Nome: " + atleti[i].getNome() + "\tCognome: " + atleti[i].getCognome() + "\tEtà: " + atleti[i].getEtà());
+        for (Atleta i: atleti){
+            if (specialità == i.getSpecialità()){
+                System.out.println("Nome: " + i.getNome() + "\tCognome: " + i.getCognome() + " \tEtà: " + i.getEtà());
             }
         }
     }

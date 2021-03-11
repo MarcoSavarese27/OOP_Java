@@ -17,9 +17,8 @@ public class Atletica {
         Atleta[] vettore = new Atleta[3];
         Atleta p = new Atleta();
         vettore[0] = new Atleta("Luca", "Giuliani", 15, 70.5, 1.90, "Giavellotto");
-        System.out.println(vettore[0].toString());
         vettore[1] = new Atleta("Maria", "Teresa", 15, 70.5, 1.90, "Giavellotto");
-        vettore[2] = new Atleta("Luigi", "Matta", 15, 70.5, 1.90, "Schifo");
+        vettore[2] = new Atleta("Luigi", "Neri", 21, 30.5, 1.60, "Schifo");
         p.PrintAtleti(specialità, vettore);
     }
 }
