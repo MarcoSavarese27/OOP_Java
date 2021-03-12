@@ -87,7 +87,7 @@ public class CC {
                     }
                 }
                 if (contr){
-                    System.out.println("Non ci sono azioni recenti!");
+                    System.out.println("Non ci sono movimenti recenti!");
                 }
                 break;
             default:
