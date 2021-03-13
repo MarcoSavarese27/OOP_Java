@@ -1,13 +1,10 @@
 package Classi;
-
-
 import java.util.Scanner;
 
 /**
  *Crea un programma per la gestione di un controcorrente gestito dalla classe CC. Il programma deve essere in grado di
  * effettuare versamenti, prelievi, di restituire il saldo e di effettuare la lista degli ultimi 5 movimenti .
  */
-
 public class CC {
     //Parameters
     private double conto;
@@ -41,6 +38,7 @@ public class CC {
 
     //Methods
     public void bancomat(){
+        boolean quit = false;
         System.out.println("Seleziona cosa vuoi fare: ");
         System.out.println("v - versamento \np - prelievo \ns - mostra il saldo \nl - mostra la lista degli ultimi 5 movimenti");
         Scanner keyboard = new Scanner(System.in);
@@ -55,6 +53,7 @@ public class CC {
                     mov = 4;
                 movimenti[mov] = "Versamento";
                 --mov;
+                System.out.println("Hai versato con successo " + ver + " euro");
                 break;
             case "p":
                 System.out.println("Scegli la somma da prelevare: ");
@@ -90,11 +89,15 @@ public class CC {
                     System.out.println("Non ci sono movimenti recenti!");
                 }
                 break;
+            case "q":
+                quit = true;
+                break;
             default:
                 System.out.println("COMANDO NON VALIDO!");
                 break;
         }
-        bancomat();
+        if (!quit) {
+            bancomat();
+        }
     }
-
 }
