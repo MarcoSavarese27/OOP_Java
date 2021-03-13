@@ -39,7 +39,8 @@ public class CC {
     //Methods
     public void bancomat(){
         boolean quit = false;
-        System.out.println("Seleziona cosa vuoi fare: ");
+        System.out.println("Seleziona cosa vuoi fare:");
+        System.out.println("\n");
         System.out.println("v - versamento \np - prelievo \ns - mostra il saldo \nl - mostra la lista degli ultimi 5 movimenti");
         Scanner keyboard = new Scanner(System.in);
         String s = keyboard.nextLine();
