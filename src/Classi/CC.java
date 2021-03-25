@@ -1,4 +1,6 @@
 package Classi;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -8,8 +10,8 @@ import java.util.Scanner;
 public class CC {
     //Parameters
     private double conto;
-    private String[] movimenti = new String[5];
-    private int mov = movimenti.length - 1;
+    List<String> movimenti = new LinkedList<String>();
+    private int mov = 0;
 
     //Constructors
     public CC(){
@@ -49,10 +51,11 @@ public class CC {
                 System.out.println("Scegli la somma da versare: ");
                 double ver = (keyboard.nextDouble());
                 conto += ver;
-                if (mov == 0)
-                    mov = 4;
-                movimenti[mov] = "Versamento";
-                --mov;
+                movimenti.add(0, "Versamento");
+                ++mov;
+                if(mov > 5){
+                    movimenti.remove(5);
+                }
                 System.out.println("Hai versato con successo " + ver + " euro");
                 break;
             case "p":
@@ -61,28 +64,33 @@ public class CC {
                 if(prel <= conto){
                     conto -= prel;
                     System.out.println("Hai prelevato con successo " + prel + " euro");
-                    if (mov == 0)
-                        mov = 4;
-                    movimenti[mov] = "Prelievo";
-                    --mov;
+                    movimenti.add(0, "Prelievo");
+                    ++mov;
+                    if(mov > 5){
+                        movimenti.remove(5);
+                    }
                 }else{
                     System.out.println("Importo non valido! Il tuo saldo è inferiore a " + prel + " euro, riprova.");
                 }
                 break;
             case "s":
                 System.out.println("Il tuo saldo corrisponde a " + conto + " euro");
-                if (mov == 0)
-                    mov = 4;
-                movimenti[mov] = "Visione del Saldo";
-                --mov;
+                movimenti.add(0, "Visione del saldo");
+                ++mov;
+                if(mov > 5){
+                    movimenti.remove(5);
+                }
                 break;
             case "l":
                 System.out.println("Questa è la lista degli ultimi movimenti");
+                int c = 0;
                 boolean contr = true;
                 for (String i: movimenti) {
-                    if (i != null) {
-                        System.out.println(i);
+                    if(!i.isEmpty()){
                         contr = false;
+                        ++c;
+                        System.out.print(c + ".");
+                        System.out.println(i);
                     }
                 }
                 if (contr){
@@ -99,5 +107,6 @@ public class CC {
         if (!quit) {
             bancomat();
         }
+        keyboard.close();
     }
 }
