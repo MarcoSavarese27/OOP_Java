@@ -1,4 +1,4 @@
-package Esercizi;
+package basics;
 
 /**
  * Write a program that plays a simple dice game between the computer and the

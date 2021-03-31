@@ -1,4 +1,4 @@
-package Esercizi;
+package basics;
 /**
  * Write a program with a method named isEven() that accepts an int argument. The
  * method should return true if the argument is even, or false if otherwise. The

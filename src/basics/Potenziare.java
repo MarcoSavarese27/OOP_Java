@@ -1,4 +1,4 @@
-package Esercizi;
+package basics;
 
 import Classi.Potenza;
 /**

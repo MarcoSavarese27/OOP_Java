@@ -1,4 +1,4 @@
-package Esercizi;
+package basics;
 
 /**
  * Write a program in Java to display the pattern below (n = 4)

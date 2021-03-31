@@ -1,4 +1,4 @@
-package Esercizi;
+package basics;
 import Classi.Persona;
 /**
  * Write a program that calculates and displays a person's body mass index

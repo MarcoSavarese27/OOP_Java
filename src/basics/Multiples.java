@@ -1,4 +1,4 @@
-package Esercizi;
+package basics;
 
 /**
  * Write a program printing integers (1 < n < 100) divisible by 3 and 5
